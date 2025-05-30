@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chasing Autumn landscapes</title>
+    <style>
+      h1,
+      h2,
+      footer {
+        text-align: center;
+      }
+      body {
+        background: linear-gradient(
+          87.4deg,
+          rgb(255, 241, 165) 1.9%,
+          rgb(200, 125, 76) 49.7%,
+          rgb(83, 54, 54) 100.5%
+        );
+      }
+      .container {
+        width: 700px;
+        margin: 0 auto;
+        background-color: white;
+        margin: 20px auto;
+        padding: 20px;
+        border-radius: 10px;
+      }
+      .container img {
+        width: 100%;
+      }
+      .change-theme-button,
+      .leaf-button {
+        display: block;
+        margin: 0 auto;
+        transition: all 150ms ease-in-out;
+      }
+      .change-theme-button {
+        padding: 8px 12px;
+        border-radius: 10px;
+        border: 1px solid #000;
+        background-color: black;
+        color: white;
+      }
+
+      .change-theme-button:hover {
+        background-color: brown;
+        color: white;
+        border: none;
+      }
+
+      .leaf-button {
+        padding: 10px 20px;
+        border-radius: 30px;
+      }
+      .leaf-button:hover {
+        background-color: brown;
+        color: white;
+        border: solid 1px white;
+        cursor: pointer;
+      }
+      .main-fall-picture {
+        border-radius: 10px;
+      }
+      .main-fall-picture:hover {
+        transform: scale(1.1);
+        transition: all 150ms ease-in-out;
+      }
+      .fall-gallery {
+        margin: 5px 0;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+      }
+      .fall-gallery img {
+        width: 100%;
+        height: 100%;
+        transition: all 150 ease-in-out;
+      }
+      .fall-gallery img:hover {
+        transform: scale(1.5);
+        transition: all 150ms ease-in-out;
+      }
+      img {
+        border-radius: 10px;
+      }
+      P {
+        line-height: 1.5;
+      }
+      footer {
+        margin-top: 0px;
+      }
+
+      a {
+        text-decoration: none;
+        color: brown;
+      }
+      .dark {
+        background-color: black;
+        color: white;
+      }
+
+      .dark .container {
+        background-color: rgb(53, 35, 35);
+      }
+      .dark a {
+        color: brown;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="change-theme-button">Change theme</button>
+    <div class="container">
+      <h1>Chasing Autumn landscapes 🍂</h1>
+      <h2>Let cool air, warm colors, and quiet moments take you there.</h2>
+      <img
+        class="main-fall-picture"
+        src="https://images.unsplash.com/photo-1482015527294-7c8203fc9828?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        alt="fall trees and river on a cloudy day"
+      />
+      <div class="fall-gallery">
+        <img
+          src="https://images.unsplash.com/photo-1490633874781-1c63cc424610?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="fall leaf and a book"
+        />
+        <img
+          src="https://images.unsplash.com/photo-1507100403890-47482dcd79e0?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="sun setting behind fall trees"
+        />
+        <img
+          src="https://images.unsplash.com/photo-1481127950397-88e4c4f4b83b?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="happy woman plays with fall leaves"
+        />
+      </div>
+      <p>
+        Leaf peeping, fall color tourism, or simply fall tourism is the activity
+        in which people travel to observe and photograph the fall foliage in
+        autumn. The term comes from the United States, having been first
+        mentioned in 1966. Although the activity is prominent in the United
+        States, where it is considered one of the most popular autumn
+        activities, it is also present in other cultures, such as in Japan,
+        where it is known as momijigari and has been practiced since the Heian
+        period.
+        <a href="https://en.wikipedia.org/wiki/Leaf_peeping"
+          >Learn more on Wikipedia</a
+        >
+      </p>
+
+      <button class="leaf-button">Get your Leaf Peeping guide here</button>
+    </div>
+    <footer>
+      Coded by
+      <a href="https://github.com/advillanova" target="blank">
+        Aline Villanova
+      </a>
+      ♡
+    </footer>
+    <script>
+      function changeTheme() {
+        let body = document.querySelector("body");
+
+        if (body.classList.contains("dark")) {
+          body.classList.remove("dark");
+        } else {
+          body.classList.add("dark");
+        }
+      }
+
+      let darkThemeButton = document.querySelector(".change-theme-button");
+      darkThemeButton.addEventListener("click", changeTheme);
+    </script>
+  </body>
+</html>

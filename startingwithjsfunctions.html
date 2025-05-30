@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: Cerebri Sans, Helvetica, Arial, sans-serif;
+      }
+      .main-page {
+        margin: 150px auto;
+        display: 60%;
+        width: 60%;
+        text-align: center;
+      }
+      h1,
+      h1 {
+        font-weight: bold;
+      }
+      h1 {
+        color: black;
+        font-size: 35px;
+      }
+      h2 {
+        color: #885df1;
+        font-size: 30px;
+      }
+
+      p {
+        font-family: PT Mono, monospace;
+      }
+      button {
+        color: #885df1;
+        border-radius: 25px;
+        border: 1px solid #885df1;
+        background-color: transparent;
+        margin: 20px 0;
+        padding: 20px 25px;
+        transition: all 0.3s ease-in-out;
+        font-size: 13px;
+      }
+      button:hover {
+        background-color: #885df1;
+        color: white;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="main-page">
+      <h1>👩‍💻 She Codes is a coding workshop for women.</h1>
+      <h2>Access a new career in Technology.</h2>
+      <p>
+        She codes teaches coading, design and management skills to women.
+        <br />
+        <strong>Limited amount of spots!</strong>
+      </p>
+      <button>Apply Now</button>
+    </div>
+    <script>
+      function askCountry() {
+        let country = prompt("Which country are you from?");
+        country = country.trim().toLowerCase();
+
+        if (
+          country === "portugal" ||
+          country === "brazil" ||
+          country === "brasil"
+        ) {
+          alert("Cool, you speak Portuguese!");
+        } else {
+          alert("Go learn Portuguese");
+        }
+      }
+
+      askCountry();
+    </script>
+  </body>
+</html>

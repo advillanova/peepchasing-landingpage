@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Class Manipulation - Lesson 5 - Challenge 👹</title>
+    <style>
+      body {
+        background: #ffffff;
+      }
+      .dark-theme {
+        background: black;
+      }
+      .light-button {
+        background: black;
+        color: #ffffff;
+      }
+      .dark-button {
+        background: #ffffff;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <button>Dark Theme</button>
+
+    <script>
+      function changeButtonTheme() {
+        let dark = document.body.classList.add("dark-theme");
+        let button = document.querySelector("button");
+        button.classList.add("dark-button");
+        button.classList.remove("light-button");
+      }
+
+      let button = document.querySelector("button");
+      button.addEventListener("click", changeButtonTheme);
+    </script>
+  </body>
+</html>
